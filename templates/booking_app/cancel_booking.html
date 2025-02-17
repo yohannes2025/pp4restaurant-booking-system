@@ -1,0 +1,11 @@
+<!-- templates/booking_app/cancel_booking.html -->
+{% extends 'base.html' %} {% block title %}Cancel Booking{% endblock %} {% block
+content %}
+<h1>Cancel Booking</h1>
+<p>Are you sure you want to cancel this booking?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirm Cancellation</button>
+  <a href="{% url 'view_bookings' %}">Back to Bookings</a>
+</form>
+{% endblock %}
