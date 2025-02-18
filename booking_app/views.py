@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import BookingForm
 from django.utils import timezone
+from django.contrib.auth.forms import UserCreationForm
 
 
 # Create your views here.
@@ -47,3 +48,16 @@ def cancel_booking(request, booking_id):
         messages.success(request, 'Your booking has been cancelled.')
         return redirect('view_bookings')
     return render(request, 'cancel_booking.html', {'booking': booking})
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for {username}!')
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'register.html', {'form': form})
