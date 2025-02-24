@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-z=a#moxv+aw-#_wyp-qork(^uhir#u-6xu2by8co(el3d09wq3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['pp4-restaurant-booking-system.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -79,7 +79,14 @@ WSGI_APPLICATION = 'restaurant_booking.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "dart_task_skid_224096",
+        "PASSWORD": "npg_ZM1uJgwao5Qf",
+        "USER": "neondb_owner",
+        "HOST": "ep-round-violet-a2uhsauy.eu-central-1.aws.neon.tech",
+        "PORT": "5432",
+    }
 }
 
 
@@ -119,6 +126,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
