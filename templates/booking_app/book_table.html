@@ -1,0 +1,9 @@
+<!-- templates/booking_app/book_table.html -->
+{% extends 'booking_app/base.html' %} {% block title %}Book a Table{% endblock
+%} {% block content %}
+<h1>Book a Table</h1>
+<form method="post">
+  {% csrf_token %} {{ form|crispy }}
+  <button type="submit" class="btn btn-primary">Book</button>
+</form>
+{% endblock %}
