@@ -1,9 +1,21 @@
 <!-- templates/booking_app/book_table.html -->
-{% extends 'booking_app/base.html' %} {% block title %}Book a Table{% endblock%}
+{% extends 'booking_app/base.html' %} 
+
+{% block title %}
+Book a Table
+{% endblock %}
+
 {% block content %}
-<h1>Book a Table</h1>
-<form method="post" class="form">
-  {% csrf_token %} {{ form}}
-  <button type="submit" class="btn btn-primary">Book</button>
-</form>
+<div class="container mt-5">
+    <h1 class="mb-4">Book a Table</h1>
+    <form method="post" class="form">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            {{ form.as_p }}
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Book</button>
+    </form>
+</div>
 {% endblock %}
