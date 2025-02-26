@@ -6,6 +6,9 @@ from django.contrib.auth.forms import UserCreationForm  # Import
 from django.urls import reverse
 from .models import Booking, Table, Restaurant
 from .forms import BookingForm
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+from django.contrib.auth import logout
 
 
 def home(request):
@@ -62,3 +65,7 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'booking_app/register.html', {'form': form})
+
+
+
+    
