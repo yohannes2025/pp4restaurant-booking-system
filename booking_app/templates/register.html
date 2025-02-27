@@ -1,0 +1,13 @@
+<!-- templates/booking_app/register.html -->
+{% extends 'base.html' %} {% load crispy_forms_tags %}
+<!-- Load crispy forms tag -->
+
+{% block title %}Register{% endblock %} {% block content %}
+<h1>Register</h1>
+<form method="post">
+  {% csrf_token %} {{ form|crispy }}
+  <!-- Use crispy forms to render the form -->
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+{% endblock %}
