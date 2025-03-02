@@ -1,4 +1,45 @@
+
 # Restaurant Booking System
+
+## CONTENTS
+- [Site Objectives](#site-objectives)
+- [User Experience/UX](#user-experienceux)
+  - [Target Audience](#target-audience)
+  - [User Stories](#user-stories)
+    - [New Visitor Goals](#new-visitor-goals)
+    - [Existing Visitor Goals](#existing-visitor-goals)
+- [Design Choices](#design-choices)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+  - [Logo and Favicon](#logo-and-favicon)
+  - [Wireframes](#wireframes)
+  - [Flow Diagram](#flow-diagram)
+  - [Database Plan](#database-plan)
+- [Features](#features)
+  - [Registration](#registration)
+  - [Future Features](#future-features)
+  - [Features Not Included](#features-not-included)
+- [Technologies Used](#technologies-used)
+- [Programming Languages, Frameworks and Libraries Used](#programming-languages-frameworks-and-libraries-used)
+- [Agile](#agile)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [User](#user)
+  - [Bugs](#bugs)
+  - [Lighthouse](#lighthouse)
+  - [Validation Testing](#validation-testing)
+    - [HTML & CSS](#html--css)
+  - [Python Testing](#python-testing)
+- [Deployment](#deployment)
+  - [Github Deployment](#github-deployment)
+  - [Creating a Fork or Copying](#creating-a-fork-or-copying)
+  - [Clone](#clone)
+  - [Repository deployment via Heroku](#repository-deployment-via-heroku)
+  - [Deployment of the app](#deployment-of-the-app)
+- [Credits](#credits)
+- [Media](#media)
+- [Acknowledgments and Thanks](#acknowledgments-and-thanks)
+
 
 ## Site Objectives
 The Restaurant Booking System aims to provide users with an easy and efficient way to book tables at their favorite restaurants. It eliminates the need for direct phone calls and enables customers to manage their bookings effortlessly online, enhancing overall customer satisfaction.
